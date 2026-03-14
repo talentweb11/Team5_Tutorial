@@ -8,18 +8,17 @@ using System;
 
 namespace Timer
 {
-    class BeepAlarm
+    class BeepAlarm : IObserver
     {
-
         // constructor
         public BeepAlarm()
         {
         }
-		
-		// to be invoked when the alarm is triggered
-		public void Update()
-		{
-			Console.Beep();
-		}
+
+        // to be invoked when the alarm is triggered
+        public void Update()
+        {
+            Console.Beep();
+        }
     }
 }
