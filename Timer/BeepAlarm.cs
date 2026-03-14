@@ -10,11 +10,6 @@ namespace Timer
 {
     class BeepAlarm : IObserver
     {
-        // constructor
-        public BeepAlarm()
-        {
-        }
-
         // to be invoked when the alarm is triggered
         public void Update()
         {
