@@ -1,3 +1,6 @@
+dotnet run --project Timer\Timer.csproj 
+
+
 Question 3 (Behavioral Design Pattern - Observer)
 
 This project was updated so the timer now uses the Observer pattern correctly. The
