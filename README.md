@@ -1,7 +1,7 @@
-dotnet run --project Timer\Timer.csproj 
-
-
 Question 3 (Behavioral Design Pattern - Observer)
+
+Run the program with:
+`dotnet run --project Timer\Timer.csproj`
 
 This project was updated so the timer now uses the Observer pattern correctly. The
 `Timer` class no longer calls a specific alarm directly. Instead, it notifies any attached
@@ -29,10 +29,12 @@ the observer prints text, makes a sound, or performs some other action.
 
 3. What changed in `TextAlarm` and the main program?
 `TextAlarm` was updated to implement `IObserver`, and its `Update()` method now prints
-the stored message each time the timer sends a notification. `BeepAlarm` was also updated
-to implement `IObserver`. In `Program.cs`, both alarms are now attached by calling
-`timer.Attach(alarm1)` and `timer.Attach(alarm2)` before `timer.Run(3)`.
+the stored message each time the timer sends a notification. In `Program.cs`, two
+`TextAlarm` objects are created with different messages, both are attached by calling
+`timer.Attach(alarm1)` and `timer.Attach(alarm2)`, and the program asks the user to enter
+the number of ticks before calling `timer.Run(numberOfTicks)`.
 
 Explanation:
-This shows that multiple observer types can react to the same timer. One observer prints
-a message and another beeps, which demonstrates the purpose of the Observer pattern.
+This matches the assignment more closely because the number of ticks is now provided as
+input, and both observers are `TextAlarm` instances. It also shows that multiple
+observers of the same type can listen to the same timer and react on every tick.
