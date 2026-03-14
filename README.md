@@ -19,9 +19,6 @@ Files overview:
   timer must implement `Update()`.
 - `TextAlarm.cs` contains a concrete observer. It stores a message and prints that message
   every time the timer notifies it.
-- `BeepAlarm.cs` contains another observer example that beeps when updated. It is kept as
-  an extra observer class, although the current main program uses two `TextAlarm`
-  instances to match the assignment wording.
 - `Timer.csproj` is the project file used by the .NET CLI to build and run the program.
 - `Timer.sln` is the Visual Studio solution file for opening the project in the IDE.
 
